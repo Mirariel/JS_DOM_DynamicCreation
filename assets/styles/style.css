@@ -10,6 +10,7 @@ article {
   border-radius: 15px;
   background-color: lightblue;
   min-width: 20%;
+  min-width: 350px;
   max-width: 30%;
   display: flex;
   margin: 20px;
