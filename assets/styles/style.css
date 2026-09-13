@@ -1,43 +1,65 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
 }
 
 article {
-    border: 1px solid blue;
-    border-radius: 15px;
-    background-color: lightblue;
-    max-width: 450px;
+  border: 1px solid blue;
+  border-radius: 15px;
+  background-color: lightblue;
+  min-width: 20%;
+  max-width: 30%;
+  display: flex;
+  margin: 20px;
+  flex-direction: column;
 }
 
 .headerBgSrc {
-    border-bottom: 1px solid blue;
-    background-color: rgb(129, 202, 226);
-    border-top-left-radius: 15px;
-    border-radius: 15px 15px 0 0;
-    background-image: url("https://img.freepik.com/premium-photo/tropical-beach-with-turquoise-seas_1170794-187533.jpg");
-    background-size: cover;
-    background-position: center 25%;
-    background-repeat: no-repeat;
-    color: white;
-    padding: 15px   ;
+  border-bottom: 1px solid blue;
+  background-color: rgb(129, 202, 226);
+  border-top-left-radius: 15px;
+  border-radius: 15px 15px 0 0;
+  background-image: url("https://img.freepik.com/premium-photo/tropical-beach-with-turquoise-seas_1170794-187533.jpg");
+  background-size: cover;
+  background-position: center 25%;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 15px;
+  position: relative;
+}
+
+.deleteBtn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: red;
+  background-color: rgba(255, 255, 255, 0.356);
+  padding: 10px;
+  border-radius: 50%;
+  line-height: 9px;
+}
+
+.deleteBtn:hover {
+  background-color: rgb(199, 61, 61);
+  color: white;
 }
 
 .title {
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-font-size: 27px;
-text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 27px;
+  text-align: center;
 }
 
 .category {
-    margin: 2px 8px;
+  margin: 2px 8px;
 }
 
 .newsBody {
-    padding: 15px;   
+  padding: 15px;
 }
 .date {
-    padding: 5px
+  margin-top: auto;
+  padding: 10px;
 }
