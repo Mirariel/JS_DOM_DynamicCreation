@@ -9,7 +9,7 @@ article {
     border: 1px solid blue;
     border-radius: 15px;
     background-color: lightblue;
-    max-width: 400px;
+    max-width: 450px;
 }
 
 .headerBgSrc {
@@ -22,6 +22,7 @@ article {
     background-position: center 25%;
     background-repeat: no-repeat;
     color: white;
+    padding: 15px   ;
 }
 
 .title {
