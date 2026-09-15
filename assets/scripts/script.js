@@ -36,60 +36,22 @@ const news = [
   },
 ];
 
-function createHeadEl() {
-  const header = document.createElement("header");
-  header.classList.add("headerBgSrc");
-  return header;
-}
-
-function createDelBtn() {
-  const btn = document.createElement("button");
-  btn.classList.add("deleteBtn");
-  btn.textContent = "x";
-  return btn;
-}
-
-function createPEl() {
-  const p = document.createElement("p");
-  p.classList.add("category");
-
-  return p;
-}
-function createH1El() {
-  const h1 = document.createElement("h1");
-  h1.classList.add("title");
-
-  return h1;
-}
-function createDivBodyEl() {
-  const div = document.createElement("div");
-  div.classList.add("newsBody");
-  return div;
-}
-function createFootEl() {
-  const footer = document.createElement("footer");
-  footer.classList.add("date");
-  return footer;
+function createEl(el, cl = null, txt = null) {
+  const element = document.createElement(`${el}`);
+  element.classList.add(`${cl}`);
+  element.textContent = txt;
+  return element;
 }
 
 function createInfoNewsArticle(el) {
-  const article = document.createElement("article");
-  const header = createHeadEl();
+  const article = createEl("article");
+  const header = createEl("header", "headerBgSrc");
   header.style.backgroundImage = `url(${el.headerBgSrc})`;
-
-  const btn = createDelBtn();
-
-  const p = createPEl();
-  p.textContent = el.category;
-
-  const h1 = createH1El();
-  h1.textContent = el.title;
-
-  const div = createDivBodyEl();
-  div.textContent = el.body;
-
-  const footer = createFootEl();
-  footer.textContent = el.date;
+  const btn = createEl("button", "deleteBtn", "x");
+  const h1 = createEl("h2", "title", el.category);
+  const p = createEl("p", "category", el.title);
+  const div = createEl("div", "newsBody", el.body);
+  const footer = createEl("footer", "date", el.date);
 
   header.append(btn, h1, p);
   article.append(header, div, footer);
